@@ -16,7 +16,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    background-color: #f7f5f5;
+    margin:10px;
+    border-radius: 5px;
 }
 .applicationForm>h2{
     color: var(--textcolor);
@@ -27,7 +29,6 @@
 .formLabel{
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
     margin: 10px 40px;
 
 }
@@ -40,7 +41,8 @@
 }
 .formLabel>label>input{
     display: flex;
-    height: 25px;
+    height: 30px;
+    font-size: 16px;
     border-radius: 5px;
     border: 1px solid lightgrey;
     width: 99%;
@@ -52,36 +54,31 @@
     border:1px solid lightgrey;
     margin-top: 10px;
 }
-.formInput{
+.checkbox{
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10px;
 }
-.formInput>input{
-    margin: 10px 5px;
-    font-size: 15px;
+.checkbox>label>input{
+    height: 16px;
+    width: 16px;
+}
+.submitButton{
+    margin: 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #2d7ff9;
+    border:none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+.submitButton:hover{
+    background-color: #3b87fa;
+}
 
-    
-}
-.formQuestions{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-}
-.formQuestions>div{
-    border: 1px solid green;
-    justify-content: center;
-    margin: 10px 5px;
-}
 
-.formQuestions>div>label{
-    margin: 10px 10px;
-    font-size: var(--fontsize);
-    display: flex;
-    flex-direction: column;
 
-}
-.formQuestions>div>label>textarea{
-    margin: 5px 5px;
-}
+

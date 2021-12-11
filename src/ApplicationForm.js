@@ -6,7 +6,6 @@ function ApplicationForm() {
     return <>
         <form className="form" >
             <div className="container"> 
-
             <div className="applicationForm">
                 <h2>Franchise Application Form</h2>
                 <div className="formLabel">
@@ -16,20 +15,27 @@ function ApplicationForm() {
                     <label>Identity Number
                         <input type="text"/>
                     </label>
-                    <label>Address
-                        <input type="text"/>
+                    <label>Email
+                        <input type="email"/>
                     </label>
                     <label>Phone Number
                         <input type="tel"/>
                     </label>
-                    <label>Email
-                        <input type="email"/>
+                    <label>Address
+                        <textarea rows={5}></textarea>
                     </label>
                     <label>Date of Birth
                         <input type="date"/>
                     </label>
                     <label>Were you ever involved with retail trade?
-                        <input type="checkbox" title="yes" />
+                        <div className="checkbox">
+                            <label> Yes
+                                <input type="checkbox" value="Yes" />
+                            </label>
+                            <label>No
+                                <input type="checkbox" value="No" />
+                            </label>
+                        </div>
                     </label>
                     <label>What is your reason for preferring Lokumcu Baba?
                         <textarea rows={5} ></textarea>
@@ -45,8 +51,8 @@ function ApplicationForm() {
                     </label>
                 </div>
                 
+            <input className="submitButton" type="submit" value="Send"/>
             </div>
-            <input type="submit" value="Send"/>
             </div>
         </form>
         <form >

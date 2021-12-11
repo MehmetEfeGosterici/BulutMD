@@ -1,5 +1,6 @@
 .header-container{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     background-color: #ff6b21;
 }
@@ -12,10 +13,19 @@
     align-items: center;
     
 }
-.anchors>ul{
-    list-style: none;
+.anchors{
     display: flex;
+    justify-content: space-evenly;
 }
-.anchors>ul>li{
-    padding: 10px 20px;
+.anchors>a{
+    padding:30px
+}
+.anchors>a:hover{
+    background-color: #f05c11;
+}
+.anchors>a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
 }

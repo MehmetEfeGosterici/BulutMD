@@ -10,12 +10,27 @@ function Header() {
                     <img src={LokumcuBaba} />
                 </div>
                 <div className="anchors">
-                    <ul>
-                        <li>Home</li>
-                        <li>About Us</li>
-                        <li>Products</li>
-                        <li>Contact</li>
-                    </ul>
+                    <a href="#">
+                        <div>
+                            Home
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div>
+                            About Us
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div>
+                            Products
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div>
+                            Contact
+                        </div>
+                    </a>
+                    
                 </div>
                 
             </div>
