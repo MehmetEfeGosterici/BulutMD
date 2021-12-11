@@ -1,0 +1,87 @@
+:root{
+    --fontsize: 20px;
+    --textcolor: #636363;
+    --background: #ff6b21;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.applicationForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.applicationForm>h2{
+    color: var(--textcolor);
+    font-family:sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.formLabel{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    margin: 10px 40px;
+
+}
+.formLabel>label{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 5px;
+    font-size: var(--fontsize);
+    color: var(--textcolor);
+}
+.formLabel>label>input{
+    display: flex;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    width: 99%;
+    margin-top: 10px;
+}
+.formLabel>label>textarea{
+    display: flex;
+    border-radius: 5px;
+    border:1px solid lightgrey;
+    margin-top: 10px;
+}
+.formInput{
+    display: flex;
+    flex-direction: column;
+}
+.formInput>input{
+    margin: 10px 5px;
+    font-size: 15px;
+
+    
+}
+.formQuestions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.formQuestions>div{
+    border: 1px solid green;
+    justify-content: center;
+    margin: 10px 5px;
+}
+
+.formQuestions>div>label{
+    margin: 10px 10px;
+    font-size: var(--fontsize);
+    display: flex;
+    flex-direction: column;
+
+}
+.formQuestions>div>label>textarea{
+    margin: 5px 5px;
+}
