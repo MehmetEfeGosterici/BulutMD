@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f7f5f5;
-    margin:10px;
+    margin:10px 0px;
     border-radius: 5px;
 }
 .applicationForm>h2{
@@ -48,6 +48,9 @@
     width: 99%;
     margin-top: 10px;
 }
+.invalid{
+    border:2px solid rgb(255, 86, 86) !important;
+}
 .formLabel>label>textarea{
     display: flex;
     border-radius: 5px;
@@ -77,6 +80,15 @@
 }
 .submitButton:hover{
     background-color: #3b87fa;
+}
+.warning{
+    display: none;
+}
+.warningInvalid{
+    display: flex;
+    font-size:12px;
+    color: rgb(255, 86, 86);
+    margin: 0px 5px
 }
 
 
