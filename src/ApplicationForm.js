@@ -11,8 +11,8 @@ function ApplicationForm() {
 
     const request = async ()=>{
 
-        if(nameRegex.test(name)&&numRegex.test(tc)&&numRegex(phone)&&emailRegex(email)){
-            const res = await axios.post("http://localhost:8080/form/api/v1/",{
+        if(nameRegex.test(name)&&numRegex.test(tc)&&numRegex.test(phone)&&emailRegex.test(email)){
+            const res = await axios.post("http://localhost:8080/exampleProject-0.0.1-SNAPSHOT/",{
                 name:name,
                 identityNum:tc,
                 email:email,
@@ -27,6 +27,7 @@ function ApplicationForm() {
             })
             console.log(res.data)
             alert("Application sent successfully")
+            return;
         }
         alert("Please make sure the form is filled out correctly.")
         return;
@@ -40,7 +41,7 @@ function ApplicationForm() {
     const [dob,setDob] = useState("")
     const [q1,setq1] = useState("")
     const [q2,setq2] = useState("")
-    const [q3,setq3] = useState("")
+    const [q3,setq3] = useState("Edirne")
     const [q4,setq4] = useState("")
     const [q5,setq5] = useState("")
     return <>
@@ -85,8 +86,8 @@ function ApplicationForm() {
                         <textarea rows={5} value={q2} onChange={(e)=>setq2(e.target.value)} ></textarea>
                     </label>
                     <label>Which City/district are you considering a franchise for?
-                        <select value={q3}  onChange={(e)=>setq3(e.target.value)}>
-                            <option selected value="Edirne">Edirne</option>
+                        <select  value={q3}  onChange={(e)=>setq3(e.target.value)}>
+                            <option value="Edirne">Edirne</option>
                             <option value="Istanbul">Istanbul</option>
                             <option value="Ankara">Ankara</option>
                             <option value="Izmir">Izmir</option>
