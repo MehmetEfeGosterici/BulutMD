@@ -12,7 +12,7 @@ function ApplicationForm() {
     const request = async ()=>{
 
         if(nameRegex.test(name)&&numRegex.test(tc)&&numRegex.test(phone)&&emailRegex.test(email)){
-            const res = await axios.post("http://localhost:8080/exampleProject-0.0.1-SNAPSHOT/",{
+            const res = await axios.post("http://localhost:8080/exampleProject-0.0.1-SNAPSHOT/posted",{
                 name:name,
                 identityNum:tc,
                 email:email,
