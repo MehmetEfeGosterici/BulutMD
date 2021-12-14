@@ -6,7 +6,7 @@ import axios from 'axios';
 function ApplicationForm() {
 
     const emailRegex = /^[a-zA-Z0-9.,'-_]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
-    const phoneRegex = /^[0-9]{11}$/;
+    const phoneRegex = /^0[1-9]\d{9}$/;
     const tcRegex = /^[1-9]\d{10}$/;
     const nameRegex = /^[a-z ,.'-]+$/i;
 
