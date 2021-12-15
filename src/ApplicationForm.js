@@ -12,7 +12,7 @@ function ApplicationForm() {
 
     const request = async ()=>{
 
-        if(nameRegex.test(name)&&phoneRegex.test(tc)&&tcRegex.test(phone)&&emailRegex.test(email)){
+        if(nameRegex.test(name)&&phoneRegex.test(phone)&&tcRegex.test(tc)&&emailRegex.test(email)){
             const res = await axios.post("http://localhost:8080/exampleProject-0.0.1-SNAPSHOT/posted",{
                 name:name,
                 identityNum:tc,
@@ -52,20 +52,20 @@ function ApplicationForm() {
                 <h2>Franchise Application Form</h2>
                 <div className="formLabel">
                     <label>Name&Surname
-                        <input className={nameRegex.test(name)||name.length==0?"":"invalid"} type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
-                        <p className={nameRegex.test(name)||name.length==0?"warning":"warningInvalid"}>Name&Surname must consist of only english characters</p>
+                        <input className={nameRegex.test(name)||name.length===0?"":"invalid"} type="text" value={name} onChange={(e)=>setName(e.target.value)}/>
+                        <p className={nameRegex.test(name)||name.length===0?"warning":"warningInvalid"}>Name&Surname must consist of only english characters</p>
                     </label>
                     <label>Identity Number
-                        <input className={tcRegex.test(tc)||tc.length==0?"":"invalid"} id="tc" type="text" value={tc} onChange={(e)=>setTc(e.target.value)}/>
-                        <p className={tcRegex.test(tc)||tc.length==0?"warning":"warningInvalid"}>Identity number must consist of 11 digits and can't start with 0</p>
+                        <input className={tcRegex.test(tc)||tc.length===0?"":"invalid"} id="tc" type="text" value={tc} onChange={(e)=>setTc(e.target.value)}/>
+                        <p className={tcRegex.test(tc)||tc.length===0?"warning":"warningInvalid"}>Identity number must consist of 11 digits and can't start with 0</p>
                     </label>
                     <label>Email
-                        <input className={emailRegex.test(email)||email.length==0?"":"invalid"} type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-                        <p className={emailRegex.test(email)||email.length==0?"warning":"warningInvalid"}>Email address must consist of only english characters and include @ and . signs</p>
+                        <input className={emailRegex.test(email)||email.length===0?"":"invalid"} type="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                        <p className={emailRegex.test(email)||email.length===0?"warning":"warningInvalid"}>Email address must consist of only english characters and include @ and . signs</p>
                     </label>
                     <label>Phone Number
-                        <input className={phoneRegex.test(phone)||phone.length==0?"":"invalid"} type="tel" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
-                        <p className={phoneRegex.test(phone)||phone.length==0?"warning":"warningInvalid"}>Phone number must consist of 11 digits and start with 0</p>
+                        <input className={phoneRegex.test(phone)||phone.length===0?"":"invalid"} type="tel" value={phone} onChange={(e)=>setPhone(e.target.value)}/>
+                        <p className={phoneRegex.test(phone)||phone.length===0?"warning":"warningInvalid"}>Phone number must consist of 11 digits and start with 0</p>
                     </label>
                     <label>Address
                         <textarea rows={5} value={address} onChange={(e)=>setAdress(e.target.value)}></textarea>
