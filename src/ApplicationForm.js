@@ -13,7 +13,8 @@ function ApplicationForm() {
     const request = async ()=>{
 
         if(nameRegex.test(name)&&phoneRegex.test(phone)&&tcRegex.test(tc)&&emailRegex.test(email)){
-            const res = await axios.post("http://localhost:8080/exampleProject-0.0.1-SNAPSHOT/posted",{
+
+            const res = await axios.post("http://localhost:8080/api/v1",{
                 name:name,
                 identityNum:tc,
                 email:email,
@@ -24,7 +25,7 @@ function ApplicationForm() {
                 q2:q2,
                 q3:q3,
                 q4:q4,
-                q5:q5
+                q5:q5,
             })
             console.log(res.data)
             alert("Application sent successfully")
